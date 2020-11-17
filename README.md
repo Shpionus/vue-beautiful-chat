@@ -59,6 +59,7 @@ Vue.use(Chat)
       :showDeletion="true"
       :deletionConfirmation="true"
       :showTypingIndicator="showTypingIndicator"
+      :liveMessage="liveMessage"
       :showLauncher="true"
       :showCloseButton="true"
       :colors="colors"
@@ -95,6 +96,7 @@ export default {
       newMessagesCount: 0,
       isChatOpen: false, // to determine whether the chat window should be open or closed
       showTypingIndicator: '', // when set to a value matching the participant.id it shows the typing indicator for the specific user
+      liveMessage: '', // message to show instead of three dots in typing indicator
       colors: {
         header: {
           bg: '#4e8cff',
@@ -184,6 +186,7 @@ For more detailed examples see the demo folder.
 | confirmationDeletionMessage | String | The message you want to show when confirming the deletion
 | showEdition | Boolean | A bool indicating whether or not to show the delete button for a message
 | showTypingIndicator | String | A string that can be set to a user's participant.id to show `typing` indicator for them
+| liveMessage | String | A string with message to show in typing indicator
 | showHeader | Boolean | A bool indicating whether or not to show the header of chatwindow
 | disableUserListToggle | Boolean | A bool indicating whether or not to allow the user to toggle between message list and participants list
 | colors | Object | An object containing the specs of the colors used to paint the component. [See here](#faq)

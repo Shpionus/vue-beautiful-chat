@@ -26,6 +26,7 @@
       :show-header="showHeader"
       :placeholder="placeholder"
       :show-typing-indicator="showTypingIndicator"
+      :live-message="liveMessage"
       :colors="colors"
       :always-scroll-to-bottom="alwaysScrollToBottom"
       :message-styling="messageStyling"
@@ -168,6 +169,9 @@ export default {
     showTypingIndicator: {
       type: String,
       default: () => ''
+    },
+    liveMessage: {
+      type: String
     },
     colors: {
       type: Object,
